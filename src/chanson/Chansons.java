@@ -3,17 +3,29 @@ import mains.elementsMusicaux;
 
 public class Chansons implements elementsMusicaux {
 	String Genre;
-
+	String Titre;
+	String Artiste;
+	String Contenu;
+	int Duree;
+	int ID
+	public Chansons (String Genre, String Titre, String Artiste, String Contenu, int Duree, int ID){
+	this.Genre=Genre;
+	this.Titre=Titre;
+	this.Artiste=Artiste;
+	this.Contenu;
+	this.Duree=Duree;
+	this.ID=ID;
+}
 	@Override
 	public String getTitre() {
 		// TODO Auto-generated method stub
-		return null;
+		return Titre;
 	}
 
 	@Override
 	public String getArtiste() {
 		// TODO Auto-generated method stub
-		return null;
+		return Artiste;
 	}
 
 	@Override
@@ -31,6 +43,6 @@ public class Chansons implements elementsMusicaux {
 	@Override
 	public String getContenu() {
 		// TODO Auto-generated method stub
-		return null;
+		return Contenu;
 	}
 }

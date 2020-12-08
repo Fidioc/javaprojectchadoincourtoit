@@ -21,17 +21,17 @@ public class livresAudios implements elementsMusicaux {
 public String getTitre(){
 	return Titre;
 }
-public String getArtiste(){ 
+public String getArtiste(){
         return Artiste;
 }
-public String getCategories(){ 
+public String getCategories(){
         return Categories;
 }
 public String getLangues(){ 
         return Langues;
 }
 public String getContenu(){
-        return Titre;
+        return Contenu;
 }
 @Override
 public int getDuree() {
