@@ -34,6 +34,6 @@ public int getreleaseDate(){
 	return 0;
 }
 public void addchanson(Chansons cham) {
-	Albumlist.add(new Chansons(cham.getgenre(),cham.getTitre(),cham.getArtiste(),cham.getContenu(),cham.getDuree(),cham.getID()));
+	Albumlist.add(new Chansons(cham.getGenre(),cham.getTitre(),cham.getArtiste(),cham.getContenu(),cham.getDuree(),cham.getID()));
 }
 }
