@@ -1,7 +1,11 @@
 package Album;
 
+import java.util.LinkedList;
+
+import chanson.Chansons;
 
 public class Albums {
+	LinkedList<Chansons> Albumlist = new LinkedList<Chansons>();
 	String Titre;
 	String Artiste;
 	int Duree;
@@ -28,5 +32,8 @@ public int getID(){
 }
 public int getreleaseDate(){
 	return 0;
+}
+public void addchanson(Chansons cham) {
+	Albumlist.add(new Chansons(cham.getgenre(),cham.getTitre(),cham.getArtiste(),cham.getContenu(),cham.getDuree(),cham.getID()));
 }
 }

@@ -44,4 +44,8 @@ public class Chansons implements elementsMusicaux {
 
 		return Contenu;
 	}
+	public String getgenre() {
+
+		return this.Genre;
+	}
 }
