@@ -5,6 +5,7 @@ public interface elementsMusicaux {
 	int getDuree();
 	int getID();
 	String getContenu();
+	String getCreateur();
 }
 
 

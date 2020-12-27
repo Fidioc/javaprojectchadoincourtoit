@@ -9,7 +9,7 @@ public class mains {
 		Categuories [] cate = Categuories.values();
 		Langue [] langue = Langue.values();
 		Genre [] genre = Genre.values();
-		livre = new livresAudios("aventure","français","pirate des caraibes","moi","long",300,2);
+		livre = new livresAudios(cate[1],langue[1],"pirate des caraibes","moi","long",300,2);
 		System.out.println(livre.getTitre());
 				
 		

@@ -2,14 +2,14 @@ package chanson;
 import mains.elementsMusicaux;
 
 public class Chansons implements elementsMusicaux {
-	String Genre;
+	Genre genre;
 	String Titre;
 	String Artiste;
 	String Contenu;
 	int Duree;
 	int ID;
-	public Chansons (String Genre, String Titre, String Artiste, String Contenu, int Duree, int ID){
-	this.Genre=Genre;
+	public Chansons (Genre genre, String Titre, String Artiste, String Contenu, int Duree, int ID){
+	this.genre=genre;
 	this.Titre=Titre;
 	this.Artiste=Artiste;
 	this.Contenu=Contenu;
@@ -20,11 +20,6 @@ public class Chansons implements elementsMusicaux {
 	public String getTitre() {
 
 		return Titre;
-	}
-
-	public String getArtiste() {
-
-		return Artiste;
 	}
 
 	@Override
@@ -44,8 +39,13 @@ public class Chansons implements elementsMusicaux {
 
 		return Contenu;
 	}
-	public String getGenre() {
+	public Genre getGenre() {
 
-		return this.Genre;
+		return this.genre;
+	}
+	@Override
+	public String getCreateur() {
+		// TODO Auto-generated method stub
+		return Artiste;
 	}
 }

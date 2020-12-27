@@ -4,14 +4,14 @@ import mains.elementsMusicaux;
 public class livresAudios implements elementsMusicaux {
 	String Titre;
 	String Auteur;
-	String Categories;
-	String Langues;
+	Categuories Categories;
+	Langue Langues;
 	String Contenu;
 	int Duree;
 	int ID;
-	public livresAudios (String Categories, String Langues, String Titre, String Auteur, String Contenu, int Duree, int ID) {
-	this.Categories=Categories;
-	this.Langues=Langues;
+	public livresAudios (Categuories cate, Langue langue, String Titre, String Auteur, String Contenu, int Duree, int ID) {
+	this.Categories=cate;
+	this.Langues=langue;
 	this.Titre=Titre;
 	this.Auteur=Auteur;
 	this.Contenu=Contenu;
@@ -22,19 +22,16 @@ public String getTitre(){
 	return Titre;
 }
 
-public String getAuteur(){
-        return Auteur;
-}
-public String getCategories(){
+public Categuories getCategories(){
         return Categories;
 }
-public String getLangues(){ 
+public Langue getLangues(){ 
         return Langues;
 }
 public String getContenu(){
         return Contenu;
 }
-@Override
+
 public int getDuree() {
 	// TODO Auto-generated method stub
 	return this.Duree;
@@ -44,6 +41,13 @@ public int getID() {
 	// TODO Auto-generated method stub
 	return this.ID;
 }
+@Override
+public String getCreateur() {
+	// TODO Auto-generated method stub
+	return Auteur;
+}
+
+
 
 }
 
