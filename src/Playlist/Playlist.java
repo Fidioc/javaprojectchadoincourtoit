@@ -12,12 +12,14 @@ public class Playlist {
 	String Nom;
 	int ID;
 	public Playlist (String Name, int ID){
+		this.ID = ID;
+		this.Nom = Nom;
 }
 public String getNom(){
 	return Nom;
 }
 public int getID(){
-	return 0;
+	return this.ID;
 }
 public void addchanson(Chansons cham){
 	Chansonslist.add(new Chansons(cham.getGenre(), cham.getTitre(), cham.getCreateur(), cham.getContenu(), cham.getDuree(), cham.getID()));

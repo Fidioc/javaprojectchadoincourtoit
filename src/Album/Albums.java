@@ -25,13 +25,13 @@ public String getArtiste(){
 	return Artiste;
 }
 public int getDuree(){
-	return 0;
+	return this.Duree;
 }
 public int getID(){
-	return 0;
+	return this.ID;
 }
 public int getreleaseDate(){
-	return 0;
+	return this.releaseDate;
 }
 public void addchanson(Chansons cham) {
 	Albumlist.add(new Chansons(cham.getGenre(),cham.getTitre(),cham.getCreateur(),cham.getContenu(),cham.getDuree(),cham.getID()));

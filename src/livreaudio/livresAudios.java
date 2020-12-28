@@ -1,4 +1,8 @@
 package livreaudio;
+import java.util.HashMap;
+import java.util.Map;
+
+import Album.Albums;
 import mains.elementsMusicaux;
 
 public class livresAudios implements elementsMusicaux {
@@ -12,7 +16,7 @@ public class livresAudios implements elementsMusicaux {
 	public livresAudios (Categuories cate, Langue langue, String Titre, String Auteur, String Contenu, int Duree, int ID) {
 	this.Categories=cate;
 	this.Langues=langue;
-	this.Titre=Titre;
+	this.Titre=Titre;Map<Integer,Albums> album=new HashMap<>();
 	this.Auteur=Auteur;
 	this.Contenu=Contenu;
 	this.Duree=Duree;
