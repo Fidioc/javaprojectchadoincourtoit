@@ -28,20 +28,20 @@ public class mains {
 	static int duree;
 	static String contenu;
 
-	public static void affichemap(Map<Integer, Chansons> chansons){
-		int i=0; 
-		 Set set=chansons.entrySet();//Converting to Set so that we can traverse  
-		 Iterator itr=set.iterator(); 
+	public static void afficheMap(Map<Integer, Chansons> chansons){
+		int i=0;
+		 Set set=chansons.entrySet();//Converting to Set so that we can traverse
+		 Iterator itr=set.iterator();
 		while(itr.hasNext()) {
-			Map.Entry entry=(Map.Entry)itr.next();  
+			Map.Entry entry=(Map.Entry)itr.next();
 	        System.out.println(entry.getKey()+" "+entry.getValue());
 		}
 		//for(i=0;i<listkeys;i++) {
-			
+
 		//}
-		
+
 	}
-	public static void helpaffiche(){
+	public static void helpAffiche(){
 		System.out.println("press c for chanson,\nl for livre audio,\np for playlist,\na for album,\nq for quit\n" );
 	}
 	public static void Scanner() {
@@ -55,37 +55,44 @@ public class mains {
                 System.out.println("Définissez sa durée:");
                 duree = scan.nextInt();
 		}
-	
+
 	public static void main(String[] args) {
 		Map<Integer,Chansons> chansons=new HashMap<>();
 		Map<Integer,Albums> album=new HashMap<>();
 		Map<Integer,livresAudios> livreaudio=new HashMap<>();
 		Map<Integer,Playlist> playlist=new HashMap<>();
-		affichemap(chansons);
+		afficheMap(chansons);
 		while (true) {
 		System.out.println("Que voulez-vous ajouter ?\n");
-		helpaffiche();
+		helpAffiche();
 		Scanner scan = new Scanner(System.in);
 		String choice = scan.next();
 		switch (choice){
 			case "c" :
 					Scanner();
-					System.out.println("Définissez son genre parmi: 1 = Jazz, 2 = Classique, 3 = Hip-Hop, 4 = Rock, 5 = Pop, 6 = Rap :"); 
-					int legenre = scan.nextInt(); 
-					chansons.put(ID++, new Chansons(genre[legenre], titre, auteur, contenu, duree, ID));
-					affichemap(chansons);
+					System.out.println("Définissez son genre parmi: 1 = Jazz, 2 = Classique, 3 = Hip-Hop, 4 = Rock, 5 = Pop, 6 = Rap :");
+					int leGenre = scan.nextInt();
+					chansons.put(ID++, new Chansons(genre[leGenre], titre, auteur, contenu, duree, ID));
+					afficheMap(chansons);
+					System.out.println("Vous avez ajouté la chanson " + titre + " de " + auteur + " avec succes !");
 					break;
 			case "l" :
 					Scanner();
 					System.out.println("Définissez sa langue parmi: 1 = Français, 2 = Anglais, 3 = Italien, 4 = Espagnol, 5 = Allemand :");
-                    int lalangue = scan.nextInt();
+                    			int laLangue = scan.nextInt();
 					System.out.println("Définissez sa catégorie parmi: 1 = Jeunesse, 2 = Roman, 3 = Theatre, 4 = Discours, 5 = Documentaire :");
-                    int lacategorie = scan.nextInt();
-					livreaudio.put(ID++, new livresAudios(categorie[lacategorie],langue[lalangue], titre, auteur, contenu, duree, ID));
-			case "p":System.out.println("Definissez le nom de la playlist : ");
+                    			int laCategorie = scan.nextInt();
+					livreaudio.put(ID++, new livresAudios(categorie[laCategorie],langue[laLangue], titre, auteur, contenu, duree, ID));
+					System.out.println("Vous avez ajouté le livre audio " + titre + " de " + auteur + " avec succes !");
+					break;
+			case "p":
+					System.out.println("Definissez le nom de la playlist : ");
 					String nom = scan.next();
 					playlist.put(ID++,new Playlist(nom, ID));
-			case "a":System.out.println("Définissez son titre:");
+					System.out.println("Vous avez ajouté la playlist " + nom + " avec succes !");
+					break;
+			case "a":
+					System.out.println("Définissez son titre:");
 					titre = scan.next();
 					System.out.println("Définissez son artiste:");
 					auteur = scan.next();
@@ -93,7 +100,9 @@ public class mains {
 					int releaseDate = scan.nextInt();
 					System.out.println("Définissez sa durée:");
 					duree = scan.nextInt();
-					//playlist.put(ID++, new playlist(titre, artiste, duree, ID, releaseDate, chansons));
+					//album.put(ID++, new album(titre, artiste, duree, ID, releaseDate, chansons));
+					System.out.println("Vous avez ajouté l'album " + titre + " de " + auteur + " avec succes !");
+					break;
 			case "h":
 					helpaffiche();
 			default :break;
