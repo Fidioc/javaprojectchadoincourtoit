@@ -28,17 +28,8 @@ public class mains {
 	static int duree;
 	static String contenu;
 
-	public static void affichemap(Map<Integer, Chansons> chansons){
-		int i=0; 
-		 Set set=chansons.entrySet();//Converting to Set so that we can traverse  
-		 Iterator itr=set.iterator(); 
-		while(itr.hasNext()) {
-			Map.Entry entry=(Map.Entry)itr.next();  
-	        System.out.println(entry.getKey()+" "+entry.getValue());
-		}
-		//for(i=0;i<listkeys;i++) {
-
-		//}
+	public static void affichemap(Map<Integer, Chansons> chansons,int leID){
+		System.out.println(chansons.get(leID));
 
 	}
 	public static void helpAffiche(){
@@ -64,7 +55,7 @@ public class mains {
 		affichemap(chansons);
 		while (true) {
 		System.out.println("Que voulez-vous ajouter ?\n");
-		helpaffiche();
+		//helpaffiche();
 		Scanner scan = new Scanner(System.in);
 		String choice = scan.next();
 		switch (choice){
@@ -73,7 +64,7 @@ public class mains {
 					System.out.println("Définissez son genre parmi: 1 = Jazz, 2 = Classique, 3 = Hip-Hop, 4 = Rock, 5 = Pop, 6 = Rap :"); 
 					int legenre = scan.nextInt(); 
 					chansons.put(ID++, new Chansons(genre[legenre], titre, auteur, contenu, duree, ID));
-					affichemap(chansons);
+					affichemap(chansons,ID);
 					break;
 			case "l" :
 					Scanner();
@@ -88,17 +79,19 @@ public class mains {
 			case "a":System.out.println("Définissez son titre:");
 					titre = scan.next();
 					System.out.println("Définissez son artiste:");
-					auteur = scan.next();
+					auteur = scan.nextLine();
 					System.out.println("Définissez son date de sortie:");
 					int releaseDate = scan.nextInt();
 					System.out.println("Définissez sa durée:");
 					duree = scan.nextInt();
-					//playlist.put(ID++, new playlist(titre, artiste, duree, ID, releaseDate, chansons));
+					album.put(ID++, new Albums(titre, auteur,duree, ID, releaseDate));
 			case "h":
-					helpaffiche();
+					//helpaffiche();
 			default :break;
 		}
 
 	}
-
+	}
 }
+
+
