@@ -54,28 +54,16 @@ public class mains {
 		Map<Integer,Playlist> playlist=new HashMap<>();
 		while (true) {
 		System.out.println("Que voulez-vous ajouter ?\n");
-<<<<<<< HEAD
-		helpAffiche();
-=======
-		//helpaffiche();
->>>>>>> master
 		Scanner scan = new Scanner(System.in);
 		String choice = scan.next();
 		switch (choice){
 			case "c" :
 					Scanner();
-<<<<<<< HEAD
 					System.out.println("Définissez son genre parmi: 1 = Jazz, 2 = Classique, 3 = Hip-Hop, 4 = Rock, 5 = Pop, 6 = Rap :");
 					int leGenre = scan.nextInt();
 					chansons.put(ID++, new Chansons(genre[leGenre], titre, auteur, contenu, duree, ID));
 					affichemap(chansons,ID);
 					System.out.println("Vous avez ajouté la chanson " + titre + " de " + auteur + " avec succes !");
-=======
-					System.out.println("Définissez son genre parmi: 1 = Jazz, 2 = Classique, 3 = Hip-Hop, 4 = Rock, 5 = Pop, 6 = Rap :"); 
-					int legenre = scan.nextInt(); 
-					chansons.put(ID++, new Chansons(genre[legenre], titre, auteur, contenu, duree, ID));
-					affichemap(chansons,ID);
->>>>>>> master
 					break;
 			case "l" :
 					Scanner();
@@ -101,17 +89,12 @@ public class mains {
 					int releaseDate = scan.nextInt();
 					System.out.println("Définissez sa durée:");
 					duree = scan.nextInt();
-<<<<<<< HEAD
 					album.put(ID++, new Albums(titre, auteur, duree, ID, releaseDate));
 					System.out.println("Vous avez ajouté l'album " + titre + " de " + auteur + " avec succes !");
 					break;
 			case "h":
-				helpAffiche();
-=======
-					album.put(ID++, new Albums(titre, auteur,duree, ID, releaseDate));
-			case "h":
-					//helpaffiche();
->>>>>>> master
+				helpAffiche();			
+
 			default :break;
 		}
 
