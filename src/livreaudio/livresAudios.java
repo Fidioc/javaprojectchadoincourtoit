@@ -16,7 +16,7 @@ public class livresAudios implements elementsMusicaux {
 	public livresAudios (Categuories cate, Langue langue, String Titre, String Auteur, String Contenu, int Duree, int ID) {
 	this.Categories=cate;
 	this.Langues=langue;
-	this.Titre=Titre;Map<Integer,Albums> album=new HashMap<>();
+	this.Titre=Titre;
 	this.Auteur=Auteur;
 	this.Contenu=Contenu;
 	this.Duree=Duree;

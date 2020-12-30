@@ -36,4 +36,7 @@ public int getreleaseDate(){
 public void addchanson(Chansons cham) {
 	Albumlist.add(new Chansons(cham.getGenre(),cham.getTitre(),cham.getCreateur(),cham.getContenu(),cham.getDuree(),cham.getID()));
 }
+public void addchansonexist(Chansons cham) {
+	Albumlist.add(cham);
+}
 }
