@@ -19,7 +19,7 @@ public class Albums {
 	this.ID=ID;
 }
 public String toString(){
-	return Titre;
+	return Titre, Artiste, Duree, releaseDate, ID;
 }
 public String getTitre(){
 	return Titre;
