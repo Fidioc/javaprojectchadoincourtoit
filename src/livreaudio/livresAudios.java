@@ -24,7 +24,7 @@ public class livresAudios implements elementsMusicaux {
 }
 
 public String toString(){
-	return Titre;
+	return Titre, Auteur, Categories, Langues, Contenu, Duree, ID;
 }
 public String getTitre(){
 	return Titre;

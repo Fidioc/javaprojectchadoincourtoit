@@ -17,7 +17,7 @@ public class Playlist {
 }
 
 public String toString(){
-	return titre;
+	return Nom, ID;
 }
 public String getNom(){
 	return Nom;
