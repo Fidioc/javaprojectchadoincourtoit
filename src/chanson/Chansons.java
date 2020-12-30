@@ -16,6 +16,9 @@ public class Chansons implements elementsMusicaux {
 	this.Duree=Duree;
 	this.ID=ID;
 }
+	public String toString(){
+	return titre;
+	}
 	@Override
 	public String getTitre() {
 

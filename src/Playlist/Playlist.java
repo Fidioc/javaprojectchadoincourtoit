@@ -15,6 +15,10 @@ public class Playlist {
 		this.ID = ID;
 		this.Nom = Nom;
 }
+
+public String toString(){
+	return titre;
+}
 public String getNom(){
 	return Nom;
 }

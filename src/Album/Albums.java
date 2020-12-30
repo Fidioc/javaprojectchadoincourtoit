@@ -18,6 +18,9 @@ public class Albums {
 	this.releaseDate=releaseDate;
 	this.ID=ID;
 }
+public String toString(){
+	return Titre;
+}
 public String getTitre(){
 	return Titre;
 }

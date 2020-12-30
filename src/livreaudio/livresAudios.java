@@ -22,6 +22,10 @@ public class livresAudios implements elementsMusicaux {
 	this.Duree=Duree;
 	this.ID=ID;
 }
+
+public String toString(){
+	return Titre;
+}
 public String getTitre(){
 	return Titre;
 }
