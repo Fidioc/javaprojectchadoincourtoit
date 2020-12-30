@@ -38,33 +38,44 @@ public class mains {
 	public static void Scanner() {
 		System.out.println("Définissez son titre:");
                 Scanner scan = new Scanner(System.in);
-                titre = scan.next();
+                titre = scan.nextLine();
                 System.out.println("Définissez son auteur:");
-                auteur = scan.next();
+                auteur = scan.nextLine();
                 System.out.println("Définissez son contenu:");
-                contenu = scan.next();
+                contenu = scan.nextLine();
                 System.out.println("Définissez sa durée:");
                 duree = scan.nextInt();
 		}
 
 	public static void main(String[] args) {
-		Map<Integer,Chansons> chansons=new HashMap<>();
+		Map<Integer,Chansons> chansons=new HashMap<Integer,Chansons>();
 		Map<Integer,Albums> album=new HashMap<>();
 		Map<Integer,livresAudios> livreaudio=new HashMap<>();
 		Map<Integer,Playlist> playlist=new HashMap<>();
 		while (true) {
 		System.out.println("Que voulez-vous ajouter ?\n");
+<<<<<<< HEAD
 		helpAffiche();
+=======
+		//helpaffiche();
+>>>>>>> master
 		Scanner scan = new Scanner(System.in);
 		String choice = scan.next();
 		switch (choice){
 			case "c" :
 					Scanner();
+<<<<<<< HEAD
 					System.out.println("Définissez son genre parmi: 1 = Jazz, 2 = Classique, 3 = Hip-Hop, 4 = Rock, 5 = Pop, 6 = Rap :");
 					int leGenre = scan.nextInt();
 					chansons.put(ID++, new Chansons(genre[leGenre], titre, auteur, contenu, duree, ID));
 					affichemap(chansons,ID);
 					System.out.println("Vous avez ajouté la chanson " + titre + " de " + auteur + " avec succes !");
+=======
+					System.out.println("Définissez son genre parmi: 1 = Jazz, 2 = Classique, 3 = Hip-Hop, 4 = Rock, 5 = Pop, 6 = Rap :"); 
+					int legenre = scan.nextInt(); 
+					chansons.put(ID++, new Chansons(genre[legenre], titre, auteur, contenu, duree, ID));
+					affichemap(chansons,ID);
+>>>>>>> master
 					break;
 			case "l" :
 					Scanner();
@@ -85,20 +96,27 @@ public class mains {
 					System.out.println("Définissez son titre:");
 					titre = scan.next();
 					System.out.println("Définissez son artiste:");
-					auteur = scan.next();
+					auteur = scan.nextLine();
 					System.out.println("Définissez son date de sortie:");
 					int releaseDate = scan.nextInt();
 					System.out.println("Définissez sa durée:");
 					duree = scan.nextInt();
+<<<<<<< HEAD
 					album.put(ID++, new Albums(titre, auteur, duree, ID, releaseDate));
 					System.out.println("Vous avez ajouté l'album " + titre + " de " + auteur + " avec succes !");
 					break;
 			case "h":
 				helpAffiche();
+=======
+					album.put(ID++, new Albums(titre, auteur,duree, ID, releaseDate));
+			case "h":
+					//helpaffiche();
+>>>>>>> master
 			default :break;
-		}
 		}
 
 	}
-
+	}
 }
+
+
