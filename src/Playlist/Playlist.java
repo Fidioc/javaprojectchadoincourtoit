@@ -1,23 +1,27 @@
 package Playlist;
 import livreaudio.Categuories;
+
 import livreaudio.Langue;
 import livreaudio.livresAudios;
+
+import java.io.Serializable;
 import java.util.LinkedList;
 
 import chanson.Chansons;
+import java.io.Serializable;
 
-public class Playlist {
+public class Playlist implements Serializable{
 	LinkedList<Chansons> Chansonslist = new LinkedList<Chansons>();
 	LinkedList<livresAudios> livreAudiolist = new LinkedList<livresAudios>();
 	String Nom;
 	int ID;
 	public Playlist (String Name, int ID){
 		this.ID = ID;
-		this.Nom = Nom;
+		this.Nom = Name;
 }
 
 public String toString(){
-	return Nom, ID;
+	return "le Nom de la playlist est : "+Nom+" l'identifiant est : "+ ID;
 }
 public String getNom(){
 	return Nom;

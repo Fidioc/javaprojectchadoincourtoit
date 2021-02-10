@@ -1,10 +1,11 @@
 package Album;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 import chanson.Chansons;
 
-public class Albums {
+public class Albums implements Serializable{
 	LinkedList<Chansons> Albumlist = new LinkedList<Chansons>();
 	String Titre;
 	String Artiste;
@@ -19,7 +20,7 @@ public class Albums {
 	this.ID=ID;
 }
 public String toString(){
-	return Titre, Artiste, Duree, releaseDate, ID;
+	return "le titre de l'album est "+Titre+" l'artiste est : "+ Artiste+" la durée est : " +Duree+" la date de sorti est : "+ releaseDate+" l'identifiant est : "+ ID;
 }
 public String getTitre(){
 	return Titre;
@@ -41,5 +42,10 @@ public void addchanson(Chansons cham) {
 }
 public void addchansonexist(Chansons cham) {
 	Albumlist.add(cham);
+}
+public void affichechansons() {
+	for(Chansons el : Albumlist) {
+		System.out.println(el);
+	}
 }
 }

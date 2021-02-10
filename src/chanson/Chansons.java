@@ -1,7 +1,8 @@
 package chanson;
 import mains.elementsMusicaux;
+import java.io.Serializable;
 
-public class Chansons implements elementsMusicaux {
+public class Chansons implements elementsMusicaux , Serializable{
 	Genre genre;
 	String Titre;
 	String Artiste;
@@ -17,7 +18,7 @@ public class Chansons implements elementsMusicaux {
 	this.ID=ID;
 }
 	public String toString(){
-	return genre, Titre, Artiste, Contenu, Duree, ID;
+	return "le genre est "+genre +" le titre est : "+Titre+" L'artiste est : "+ Artiste +" il contiens : "+Contenu+" il dure : "+ Duree+" son identifiant est : "+ ID;
 	}
 	@Override
 	public String getTitre() {

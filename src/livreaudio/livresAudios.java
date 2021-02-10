@@ -1,11 +1,12 @@
 package livreaudio;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 import Album.Albums;
 import mains.elementsMusicaux;
 
-public class livresAudios implements elementsMusicaux {
+public class livresAudios implements elementsMusicaux, Serializable {
 	String Titre;
 	String Auteur;
 	Categuories Categories;
@@ -24,7 +25,7 @@ public class livresAudios implements elementsMusicaux {
 }
 
 public String toString(){
-	return Titre, Auteur, Categories, Langues, Contenu, Duree, ID;
+	return "le titre du Livre audio est : "+Titre+" l'auteur est : "+ Auteur+" sa catégorie est : "+ Categories+" la langue est : "+ Langues+" le contenue est "+ Contenu +" la duree est "+Duree +" son identifiant est "+ID;
 }
 public String getTitre(){
 	return Titre;
